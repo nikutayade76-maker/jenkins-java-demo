@@ -1,0 +1,23 @@
+pipeline 
+{
+agent any
+stages{
+stage(Checkout){
+steps {
+git https://github.com/nikutayade76-maker/jenkins-java-demo.git
+}
+}
+stage('Publich'){
+steps{
+publishHTML([
+allonemissing:true,
+alwaysLinketoLastBuild:false,
+keepAll:false,
+reportDir:'',
+reportName:
+
+])
+}
+}
+
+}
